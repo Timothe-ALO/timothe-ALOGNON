@@ -1337,7 +1337,7 @@
           <p>Je m'appelle <strong>Timothé ALOGNON</strong>, étudiant en 2ème année de cybersécurité a Knowbridge
             University Institute. Titulaire d'un Bac
             D en 2024 au Togo, je me spécialise dans la <strong>sécurité des infrastructures réseau</strong>,
-            l'administration système Linux/Windows, la mise en place d'environnements SOC et l'utilisation éfficace de l'Intelligence Artificielle a la cybersécurité.</p>
+            l'administration système Linux/Windows, et la mise en place d'environnements SOC.</p>
           <p>Mon approche est <strong>orientée pratique</strong> : je construis des labs, configure des services réels
             en simulation (Cisco Packet Tracer, GNS3, VMware, VirtualBox, Windows Server, Linux, Kali Linux) ou non, et
             documente chaque étape pour constituer un portfolio technique sérieux.</p>
@@ -1481,7 +1481,7 @@
           <div class="lab-card-header">
             <div class="lab-num">01</div>
             <div class="lab-info">
-              <div class="lab-title">Déploiement & Hardening services réseau — CentOS 8 / Windows</div>
+              <div class="lab-title">Déploiement & Hardening services réseau - CentOS 8 / Windows</div>
               <div class="lab-meta"><span class="lab-date">2026</span><span
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">CentOS 8</span><span
@@ -1553,41 +1553,45 @@
           <div class="lab-card-header">
             <div class="lab-num">03</div>
             <div class="lab-info">
-              <div class="lab-title">Home Lab SOC — Splunk + TheHive + Cortex</div>
-              <div class="lab-meta"><span class="lab-date">2024–2025</span><span
+              <div class="lab-title">SOC - Splunk + TheHive + Cortex + Cassandra + MISP + FIrewall ( SOphos UTM 9) </div>
+              <div class="lab-meta"><span class="lab-date">2025-2026</span><span
                   class="lab-difficulty diff-hard">Avancé</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">Splunk</span><span
                   class="lab-tag">TheHive</span><span class="lab-tag">Cortex</span><span
-                  class="lab-tag">Python</span><span class="lab-tag">VirusTotal</span></div>
+                  class="lab-tag">Python</span><span class="lab-tag">Sophos UTM 9</span><span
+                  class="lab-tag">MISP</span><span class="lab-tag">Apache</span></div>
             </div>
             <div class="lab-toggle">+</div>
           </div>
           <div class="lab-body">
             <div class="lab-body-inner">
-              <p class="lab-desc">Mise en place d'un SOC home lab contraint à 16 GB RAM / 256 GB. Intégration
-                Splunk (SIEM), TheHive (case management), Cortex (automatisation d'analyseurs), VirusTotal et
-                scripts Python pour alerting automatisé.</p>
+              <p class="lab-desc">Déploiement complet d'un SOC avancé avec un SIEM open source et une infrastructure
+                de collecte de logs et d'alertes. Ceci part de l'analyse des données (Logs) au declenchement d'une
+                alerte ; la creation des cas et l'analyse aves des CVEs et des signature d'attaques ; le traitement des cas et l'envoie des alertes aux équipes compétentes pour finir avec le partage des IoCs sur MISP</p>
               <div class="lab-screenshots">
                 <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">Dashboard Splunk</div>
+                  <img src="images/Splunk.png" alt="Interface de Splunk">
+                  <div class="screenshot-caption">Interface de Splunk</div>
                 </div>
                 <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">TheHive cases</div>
+                  <img src="images/thehive.png" alt="Interface de TheHive">
+                  <div class="screenshot-caption">Interface de TheHive</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/cortex.png" alt="Interface de Cortex">
+                  <div class="screenshot-caption">Interface de Cortex</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/firewall.png" alt="Interface de Sophos UTM 9">
+                  <div class="screenshot-caption">Interface de Sophos UTM 9</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/misp.png" alt="Interface de MISP">
+                  <div class="screenshot-caption">Interface de MISP</div>
                 </div>
               </div>
-              <a href="#" class="lab-link">Voir le writeup →</a>
+              <a href="https://github.com/Timothe-ALO/Advanced-SOC-and-Automation"
+                class="lab-link">Voir sur GitHub →</a>
             </div>
           </div>
         </div>
@@ -1597,7 +1601,7 @@
           <div class="lab-card-header">
             <div class="lab-num">04</div>
             <div class="lab-info">
-              <div class="lab-title">Infrastructure Windows — Active Directory & GPO</div>
+              <div class="lab-title">Infrastructure Windows - Active Directory & GPO</div>
               <div class="lab-meta"><span class="lab-date">2024</span><span
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">Windows Server</span><span
@@ -1606,34 +1610,6 @@
             </div>
             <div class="lab-toggle">+</div>
           </div>
-          <div class="lab-body">
-            <div class="lab-body-inner">
-              <p class="lab-desc">Déploiement d'un environnement Windows Server avec Active Directory, gestion des
-                GPO, configuration des politiques de sécurité et intégration de clients Windows dans le domaine.
-                Documentation technique complète.</p>
-              <div class="lab-screenshots">
-                <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">Active Directory</div>
-                </div>
-                <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">GPO configuration</div>
-                </div>
-              </div>
-              <a href="#" class="lab-link">Voir le rapport →</a>
-            </div>
-          </div>
         </div>
 
         <!-- LAB 05 -->
@@ -1641,45 +1617,60 @@
           <div class="lab-card-header">
             <div class="lab-num">05</div>
             <div class="lab-info">
-              <div class="lab-title">Configuration DNS avancée — Multi-zones & Glue Records</div>
-              <div class="lab-meta"><span class="lab-date">2024</span><span
+              <div class="lab-title">Configuration FIREWALL - UTM 9</div>
+              <div class="lab-meta"><span class="lab-date">2025</span><span
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
-              <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">BIND 9</span><span
-                  class="lab-tag">named.conf</span><span class="lab-tag">Zones DNS</span><span class="lab-tag">Glue
-                  records</span><span class="lab-tag">dig/nslookup</span></div>
+              <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">Sophos UTM 9</span><span
+                  class="lab-tag">NAT</span><span class="lab-tag">VPN</span><span class="lab-tag">AD
+                  Authentication</span><span class="lab-tag">Remote Access</span>FORTIGATE<span class="lab-tag">HTTPs
+                  Proxy</span></div>
             </div>
             <div class="lab-toggle">+</div>
           </div>
           <div class="lab-body">
             <div class="lab-body-inner">
-              <p class="lab-desc">Configuration avancée de zones DNS sous CentOS 8 : records NS/A, glue records,
-                setup multi-zones dans named.conf, délégation de zones pour sohm.knowbridge.me. Debugging et
-                validation avec dig/nslookup.</p>
+              <p class="lab-desc">Configuration avancée de parefeu Fortigate et Sophos UTM 9 pour sécuriser un réseau de trois zones WAN,LAN et DMZ  avec des protection commes les IDS/IPS , VPN , NAT et d'autres protections.</p>
               <div class="lab-screenshots">
                 <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">named.conf zones</div>
+                  <img src="images/dashboard_forti.png" alt="Interface de Fortigate">
+                  <div class="screenshot-caption">Interface de Fortigate</div>
                 </div>
                 <div class="screenshot-item">
-                  <div class="screenshot-placeholder"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>Ajoute ta capture ici</div>
-                  <div class="screenshot-caption">dig output validation</div>
+                  <img src="images/Net_FORTI.png" alt="Schema du réseau avec Fortigate">
+                  <div class="screenshot-caption">Réseaux avec Fortigate</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/fortigate_1.png" alt="Regle de parefeu Fortigate">
+                  <div class="screenshot-caption">Regles du parefeu Fortigate</div>
+                </div>
+                <div class="screenshot-item"> 
+                  <img src="images/server_fortigate.png" alt="Serveur web avec Fortigate">
+                  <div class="screenshot-caption">Serveur web avec Fortigate</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/rule_sophos.png" alt="Regle du parefeu Sophos">
+                  <div class="screenshot-caption">Regles du parefeu Sophos</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/sophos_dashboard.png" alt="Interface de Sophos UTM 9">
+                  <div class="screenshot-caption">Interface de Sophos UTM 9</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/html5_sophos.png" alt="HTML 5 VPN">
+                  <div class="screenshot-caption">HTML 5 VPN</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/ssl_vpn.png" alt="SSL VPN">
+                  <div class="screenshot-caption">SSL VPN</div>
+                </div>
+                <div class="screenshot-item">
+                  <img src="images/net_sophos.png" alt="Schema du réseau avec Sophos UTM 9">
+                  <div class="screenshot-caption">Schema du réseau avec Sophos UTM 9</div>
                 </div>
               </div>
-              <a href="#" class="lab-link">Voir le writeup →</a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
