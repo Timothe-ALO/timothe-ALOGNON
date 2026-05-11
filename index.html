@@ -1262,11 +1262,7 @@
   </aside>
 
   <main>
-    <!-- Visitor Counter Widget (localStorage) -->
-    <div id="visitor-counter" style="margin:1rem 0;display:flex;align-items:center;gap:.5rem;">
-      <span style="font-family:var(--mono);font-size:0.9rem;color:var(--text);">Visites : </span>
-      <span id="visit-count" style="font-family:var(--mono);font-size:0.9rem;color:var(--accent);">0</span>
-    </div>
+
 
     <!-- ─── HOME ─── -->
     <div class="page active" id="page-home">
@@ -1810,21 +1806,7 @@
   </main>
 
   <script>
-    // Local visitor counter using localStorage
-    function incrementVisitCount() {
-      const key = 'visitCount';
-      let count = parseInt(localStorage.getItem(key) || '0', 10);
-      count++;
-      localStorage.setItem(key, count);
-      const el = document.getElementById('visit-count');
-      if (el) el.textContent = count;
-    }
-    // Run on page load
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', incrementVisitCount);
-    } else {
-      incrementVisitCount();
-    }
+
     // Existing functions
     function nav(id, btn) {
       document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
