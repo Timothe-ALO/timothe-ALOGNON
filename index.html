@@ -1262,6 +1262,11 @@
   </aside>
 
   <main>
+    <!-- Visitor Counter Widget (localStorage) -->
+    <div id="visitor-counter" style="margin:1rem 0;display:flex;align-items:center;gap:.5rem;">
+      <span style="font-family:var(--mono);font-size:0.9rem;color:var(--text);">Visites : </span>
+      <span id="visit-count" style="font-family:var(--mono);font-size:0.9rem;color:var(--accent);">0</span>
+    </div>
 
     <!-- ─── HOME ─── -->
     <div class="page active" id="page-home">
@@ -1460,9 +1465,9 @@
             </div>
           </div>
           <div class="sc-tags"><span class="sc-tag">Windows</span><span class="sc-tag">Linux</span><span
-              class="sc-tag">Active Directory</span><span class="sc-tag">GPO</span><span
-              class="sc-tag">Windows Server</span><span class="sc-tag">PowerShell</span><span
-              class="sc-tag">Maintenance</span><span class="sc-tag">Iptables</span></div>
+              class="sc-tag">Active Directory</span><span class="sc-tag">GPO</span><span class="sc-tag">Windows
+              Server</span><span class="sc-tag">PowerShell</span><span class="sc-tag">Maintenance</span><span
+              class="sc-tag">Iptables</span></div>
         </div>
       </div>
     </div>
@@ -1555,7 +1560,8 @@
           <div class="lab-card-header">
             <div class="lab-num">03</div>
             <div class="lab-info">
-              <div class="lab-title">SOC - Splunk + TheHive + Cortex + Cassandra + MISP + FIrewall ( SOphos UTM 9) </div>
+              <div class="lab-title">SOC - Splunk + TheHive + Cortex + Cassandra + MISP + FIrewall ( SOphos UTM 9)
+              </div>
               <div class="lab-meta"><span class="lab-date">2025-2026</span><span
                   class="lab-difficulty diff-hard">Avancé</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">Splunk</span><span
@@ -1569,7 +1575,8 @@
             <div class="lab-body-inner">
               <p class="lab-desc">Déploiement complet d'un SOC avancé avec un SIEM open source et une infrastructure
                 de collecte de logs et d'alertes. Ceci part de l'analyse des données (Logs) au declenchement d'une
-                alerte ; la creation des cas et l'analyse aves des CVEs et des signature d'attaques ; le traitement des cas et l'envoie des alertes aux équipes compétentes pour finir avec le partage des IoCs sur MISP</p>
+                alerte ; la creation des cas et l'analyse aves des CVEs et des signature d'attaques ; le traitement des
+                cas et l'envoie des alertes aux équipes compétentes pour finir avec le partage des IoCs sur MISP</p>
               <div class="lab-screenshots">
                 <div class="screenshot-item">
                   <img src="images/Splunk.png" alt="Interface de Splunk">
@@ -1588,8 +1595,8 @@
                   <div class="screenshot-caption">Interface de Sophos UTM 9</div>
                 </div>
               </div>
-              <a href="https://github.com/Timothe-ALO/Advanced-SOC-and-Automation"
-                class="lab-link">Voir sur GitHub →</a>
+              <a href="https://github.com/Timothe-ALO/Advanced-SOC-and-Automation" class="lab-link">Voir sur GitHub
+                →</a>
             </div>
           </div>
         </div>
@@ -1620,8 +1627,8 @@
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">IPFIRE</span><span
                   class="lab-tag">Sophos UTM 9</span><span class="lab-tag">NAT</span><span
-                  class="lab-tag">VPN</span><span class="lab-tag">AD Authentication</span><span
-                  class="lab-tag">Remote Access</span><span class="lab-tag">FORTIGATE</span>
+                  class="lab-tag">VPN</span><span class="lab-tag">AD Authentication</span><span class="lab-tag">Remote
+                  Access</span><span class="lab-tag">FORTIGATE</span>
               </div>
             </div>
             <div class="lab-toggle">+</div>
@@ -1629,7 +1636,8 @@
           <div class="lab-body">
             <div class="lab-body-inner">
               <p class="lab-desc">Configuration avancée de parefeu Fortigate et Sophos UTM 9 pour sécuriser un réseau de
-                trois zones WAN,LAN et DMZ avec des protection commes les IDS/IPS , VPN , NAT et d'autres protections.</p>
+                trois zones WAN,LAN et DMZ avec des protection commes les IDS/IPS , VPN , NAT et d'autres protections.
+              </p>
               <div class="lab-screenshots">
                 <div class="screenshot-item">
                   <img src="images/dashboard_forti.png" alt="Interface de Fortigate">
@@ -1643,7 +1651,7 @@
                   <img src="images/fortigate_1.png" alt="Regle de parefeu Fortigate">
                   <div class="screenshot-caption">Regles du parefeu Fortigate</div>
                 </div>
-                <div class="screenshot-item"> 
+                <div class="screenshot-item">
                   <img src="images/server_fortigate.png" alt="Serveur web avec Fortigate">
                   <div class="screenshot-caption">Serveur web avec Fortigate</div>
                 </div>
@@ -1775,7 +1783,8 @@
       </div>
       <div class="contact-layout">
         <div>
-          <p class="contact-text">Je suis à la recherche d'un <strong>stage en cybersécurité</strong>,sécurité réseau ou administration système.<br><br>N'hésite pas à me contacter pour
+          <p class="contact-text">Je suis à la recherche d'un <strong>stage en cybersécurité</strong>,sécurité réseau ou
+            administration système.<br><br>N'hésite pas à me contacter pour
             discuter d'une opportunité ou d'un projet collaboratif.</p>
           <div class="contact-avail">
             <div class="pulse"></div>Disponible dès maintenant pour un stage
@@ -1801,6 +1810,22 @@
   </main>
 
   <script>
+    // Local visitor counter using localStorage
+    function incrementVisitCount() {
+      const key = 'visitCount';
+      let count = parseInt(localStorage.getItem(key) || '0', 10);
+      count++;
+      localStorage.setItem(key, count);
+      const el = document.getElementById('visit-count');
+      if (el) el.textContent = count;
+    }
+    // Run on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', incrementVisitCount);
+    } else {
+      incrementVisitCount();
+    }
+    // Existing functions
     function nav(id, btn) {
       document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
       document.querySelectorAll(".nav-item").forEach(b => b.classList.remove("active"));
