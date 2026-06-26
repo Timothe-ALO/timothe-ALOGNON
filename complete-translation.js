@@ -170,6 +170,39 @@ function loadLanguage(lang) {
   document.querySelectorAll('.lang-fr').forEach(el => {
     el.style.display = (lang === 'fr') ? '' : 'none';
   });
+
+  // Translate lab difficulties
+  document.querySelectorAll('.lab-difficulty').forEach(el => {
+    if (el.textContent.includes('Intermédiaire') || el.textContent.includes('Intermediate')) {
+      el.textContent = lang === 'fr' ? 'Intermédiaire' : 'Intermediate';
+    }
+    if (el.textContent.includes('Avancé') || el.textContent.includes('Advanced')) {
+      el.textContent = lang === 'fr' ? 'Avancé' : 'Advanced';
+    }
+    if (el.textContent.includes('Débutant') || el.textContent.includes('Beginner')) {
+      el.textContent = lang === 'fr' ? 'Débutant' : 'Beginner';
+    }
+  });
+
+  // Translate "View on GitHub" links
+  document.querySelectorAll('.lab-link').forEach(el => {
+    if (el.textContent.includes('Voir sur GitHub') || el.textContent.includes('View on GitHub')) {
+      el.textContent = lang === 'fr' ? 'Voir sur GitHub →' : 'View on GitHub →';
+    }
+  });
+
+  // Translate cert status pills
+  document.querySelectorAll('.cert-pill').forEach(el => {
+    if (el.classList.contains('pill-completed')) {
+      el.textContent = lang === 'fr' ? 'Terminé' : 'Completed';
+    }
+    if (el.classList.contains('pill-wip')) {
+      el.textContent = lang === 'fr' ? 'En cours' : 'In Progress';
+    }
+    if (el.classList.contains('pill-plan')) {
+      el.textContent = lang === 'fr' ? 'Prévu' : 'Planned';
+    }
+  });
 }
 
 // Load saved language on page load
