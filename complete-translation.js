@@ -25,7 +25,7 @@ const CONTENT = {
 
     // About
     aboutLabel: '02 - About',
-    aboutTitle: 'My journey',
+    aboutTitle: 'Who am I?',
 
     // Skills
     skillsLabel: '03 - Skills',
@@ -72,7 +72,7 @@ const CONTENT = {
 
     // About
     aboutLabel: '02 - À propos',
-    aboutTitle: 'Mon parcours',
+    aboutTitle: 'Qui suis-je ?',
 
     // Skills
     skillsLabel: '03 - Compétences',
