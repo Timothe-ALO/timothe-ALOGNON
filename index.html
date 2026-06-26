@@ -2097,22 +2097,8 @@
     document.addEventListener("mousemove", e => { glow.style.left = e.clientX + "px"; glow.style.top = e.clientY + "px"; });
 
     const labCount = document.querySelectorAll(".lab-card").length;
-    document.getElementById("lab-count").textContent = labCount;
-    document.getElementById("lab-total").textContent = labCount + " projets";
-
-    
-    }
-
-    // Load saved language preference on page load
-    const savedLang = localStorage.getItem('preferredLang') || 'fr';
-    if (savedLang === 'en') {
-      switchLang('en');
-    }
-
-
-    // ========== i18next PROFESSIONAL TRANSLATION SYSTEM ==========
-    // i18next will be loaded from CDN in <head>
-    // See i18next-system.js for implementation
+    const labCountEl = document.getElementById("lab-count");
+    if (labCountEl) labCountEl.textContent = labCount;
   </script>
   <script src="i18next-system.js"></script>
 </body>
