@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -1264,7 +1264,6 @@
       }
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 
 <body>
@@ -1274,30 +1273,27 @@
     <div class="sb-topbar"></div>
 
     <!-- Language Switcher -->
-    <div class="lang-switcher">
-      <button class="lang-btn active" onclick="switchLang('fr')" data-lang="fr">FR</button>
-      <button class="lang-btn" onclick="switchLang('en')" data-lang="en">EN</button>
-    </div>
+    
 
     <div class="sb-profile">
       <div class="avatar-ring"><img id="sidebar-photo" src="images/T 5 F _ 2.png" alt="Timothé ALOGNON"></div>
       <div class="sb-name">ALOGNON<br>Timothé</div>
       <div class="sb-role">Cybersecurity Student</div>
       <div class="sb-status">
-        <div class="pulse"></div><span>Ouvert a un stage</span>
+        <div class="pulse"></div><span>Open to internships</span>
       </div>
     </div>
     <nav>
       <div class="nav-section">Menu</div>
-      <button class="nav-item active" onclick="nav('home',this)"><span class="nav-icon">⌂</span> Accueil</button>
-      <button class="nav-item" onclick="nav('about',this)"><span class="nav-icon">◈</span> À propos</button>
+      <button class="nav-item active" onclick="nav('home',this)"><span class="nav-icon">⌂</span> Home</button>
+      <button class="nav-item" onclick="nav('about',this)"><span class="nav-icon">◈</span> About</button>
       <button class="nav-item" onclick="nav('skills',this)"><span class="nav-icon">◆</span> Skills</button>
       <div class="nav-section" style="margin-top:.75rem">Labs</div>
-      <button class="nav-item" onclick="nav('labs',this)"><span class="nav-icon">▣</span> Projets & Labs<span
+      <button class="nav-item" onclick="nav('labs',this)"><span class="nav-icon">▣</span> Projects & Labs<span
           class="nav-badge" id="lab-count">8</span></button>
       <button class="nav-item" onclick="nav('certs',this)"><span class="nav-icon">◉</span> Certifications</button>
       <div class="nav-section" style="margin-top:.75rem">Contact</div>
-      <button class="nav-item" onclick="nav('contact',this)"><span class="nav-icon">◎</span> Me contacter</button>
+      <button class="nav-item" onclick="nav('contact',this)"><span class="nav-icon">◎</span> Contact me</button>
     </nav>
     <div class="sb-footer">
       <div class="sb-links">
@@ -1315,7 +1311,7 @@
     <div class="page active" id="page-home">
       <div class="home-layout">
         <div class="home-left">
-          <div class="home-eyebrow">Cybersecurity Student - 2ème année</div>
+          <div class="home-eyebrow">Cybersecurity Student - 2nd year</div>
           <h1 class="home-h1">
             <span class="line1">ALOGNON<br>Timothé.</span><br>
             <span class="line2">Security &<br>Networks.</span>
@@ -1332,15 +1328,15 @@
           <div class="home-metrics">
             <div>
               <div class="metric-val">2<span>+</span></div>
-              <div class="metric-label" id="metric-years">ans de formation</div>
+              <div class="metric-label" id="metric-years">years of training</div>
             </div>
             <div>
               <div class="metric-val">10<span>+</span></div>
-              <div class="metric-label" id="metric-labs">labs pratiques</div>
+              <div class="metric-label" id="metric-labs">practical labs</div>
             </div>
             <div>
               <div class="metric-val">15<span>+</span></div>
-              <div class="metric-label" id="metric-services">services configurés</div>
+              <div class="metric-label" id="metric-services">services configured</div>
             </div>
           </div>
         </div>
@@ -1376,7 +1372,7 @@
     <div class="page" id="page-about">
       <div class="page-header">
         <div>
-          <div class="page-label">02 - À propos</div>
+          <div class="page-label">02 - About</div>
           <div class="page-title">Qui suis-je ?</div>
         </div>
       </div>
@@ -1429,16 +1425,16 @@
     <div class="page" id="page-skills">
       <div class="page-header">
         <div>
-          <div class="page-label">03 - Compétences</div>
-          <div class="page-title">Domaines de maîtrise</div>
+          <div class="page-label">03 - Skills</div>
+          <div class="page-title">Areas of expertise</div>
         </div>
       </div>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="sc-cat">[01] Network</div>
-          <div class="sc-title">Sécurité Réseau</div>
+          <div class="sc-title">Network Security</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>80%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>80%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="80"></div>
             </div>
@@ -1450,9 +1446,9 @@
         </div>
         <div class="skill-card">
           <div class="sc-cat">[02] Linux</div>
-          <div class="sc-title">Administration Linux</div>
+          <div class="sc-title">Linux Administration</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>80%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>80%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="80"></div>
             </div>
@@ -1463,9 +1459,9 @@
         </div>
         <div class="skill-card">
           <div class="sc-cat">[03] SOC</div>
-          <div class="sc-title">Outils SOC & SIEM</div>
+          <div class="sc-title">SOC & SIEM Tools</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>75%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>75%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="75"></div>
             </div>
@@ -1478,9 +1474,9 @@
         </div>
         <div class="skill-card">
           <div class="sc-cat">[04] Scripting & IA</div>
-          <div class="sc-title">Automatisation</div>
+          <div class="sc-title">Automation</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>80%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>80%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="80"></div>
             </div>
@@ -1491,9 +1487,9 @@
         </div>
         <div class="skill-card">
           <div class="sc-cat">[05] Web & PKI</div>
-          <div class="sc-title">Services Web & PKI</div>
+          <div class="sc-title">Web Services & PKI</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>70%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>70%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="70"></div>
             </div>
@@ -1503,9 +1499,9 @@
         </div>
         <div class="skill-card">
           <div class="sc-cat">[06] Windows & Linux</div>
-          <div class="sc-title">Environnements Windows & Linux</div>
+          <div class="sc-title">Windows & Linux Environments</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>85%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>85%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="85"></div>
             </div>
@@ -1519,7 +1515,7 @@
           <div class="sc-cat">[07] Offensive Security</div>
           <div class="sc-title">Penetration Testing & Exploitation</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>75%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>75%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="75"></div>
             </div>
@@ -1532,7 +1528,7 @@
           <div class="sc-cat">[08] Incident Response & Forensics</div>
           <div class="sc-title">DFIR & Threat Intelligence</div>
           <div class="sc-bar-wrap">
-            <div class="sc-bar-top"><span>Maîtrise</span><span>80%</span></div>
+            <div class="sc-bar-top"><span>Proficiency</span><span>80%</span></div>
             <div class="sc-bar">
               <div class="sc-bar-fill" data-w="80"></div>
             </div>
@@ -1548,8 +1544,8 @@
     <div class="page" id="page-labs">
       <div class="page-header">
         <div>
-          <div class="page-label">04 - Labs & Projets</div>
-          <div class="page-title">Réalisations pratiques</div>
+          <div class="page-label">04 - Labs & Projects</div>
+          <div class="page-title">Practical achievements</div>
         </div>
       </div>
       <div class="labs-grid" id="labs-container">
@@ -1559,7 +1555,7 @@
           <div class="lab-card-header">
             <div class="lab-num">01</div>
             <div class="lab-info">
-              <div class="lab-title">Déploiement & Hardening services réseau - CentOS 8 / Windows</div>
+              <div class="lab-title">Network Services Deployment & Hardening - CentOS 8 / Windows</div>
               <div class="lab-meta"><span class="lab-date">2026</span><span
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">CentOS 8</span><span
@@ -1598,7 +1594,7 @@
           <div class="lab-card-header">
             <div class="lab-num">02</div>
             <div class="lab-info">
-              <div class="lab-title">Configuration d'un Réseau de Campus Multi-Sites</div>
+              <div class="lab-title">Multi-Site Campus Network Configuration</div>
               <div class="lab-meta"><span class="lab-date">2025</span><span
                   class="lab-difficulty diff-hard">Avancé</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">OSPF</span><span
@@ -1693,7 +1689,7 @@
           <div class="lab-card-header">
             <div class="lab-num">05</div>
             <div class="lab-info">
-              <div class="lab-title">Configuration FIREWALL - IPFIRE / Sophos UTM 9 / FORTIGATE</div>
+              <div class="lab-title">FIREWALL Configuration - IPFIRE / Sophos UTM 9 / FORTIGATE</div>
               <div class="lab-meta"><span class="lab-date">2025</span><span
                   class="lab-difficulty diff-medium">Intermédiaire</span></div>
               <div class="lab-tags-row" style="margin-top:.4rem"><span class="lab-tag">IPFIRE</span><span
@@ -1917,7 +1913,7 @@
       <div class="page-header">
         <div>
           <div class="page-label">05 — Certifications</div>
-          <div class="page-title">Parcours de certification</div>
+          <div class="page-title">Certification path</div>
         </div>
       </div>
       <div class="certs-list">
@@ -1927,7 +1923,7 @@
             <div class="cert-name">CompTIA Security+</div>
             <div class="cert-issuer">CompTIA</div>
           </div>
-          <span class="cert-pill pill-wip">En cours</span>
+          <span class="cert-pill pill-wip">In Progress</span>
         </div>
         <div class="cert-row">
           <div class="cert-badge">CC</div>
@@ -1935,7 +1931,7 @@
             <div class="cert-name">Certified in Cybersecurity (CC)</div>
             <div class="cert-issuer">ISC²</div>
           </div>
-          <span class="cert-pill pill-plan">En préparation</span>
+          <span class="cert-pill pill-plan">Planned</span>
         </div>
         <div class="cert-row">
           <div class="cert-badge" style="padding: 4px;">
@@ -2041,7 +2037,7 @@
       <div class="page-header">
         <div>
           <div class="page-label">06 - Contact</div>
-          <div class="page-title">Travaillons ensemble</div>
+          <div class="page-title">Let's work together</div>
         </div>
       </div>
       <div class="contact-layout">
@@ -2050,7 +2046,7 @@
             administration système.<br><br>N'hésite pas à me contacter pour
             discuter d'une opportunité ou d'un projet collaboratif.</p>
           <div class="contact-avail">
-            <div class="pulse"></div>Disponible dès maintenant pour un stage
+            <div class="pulse"></div>Available now for internship
           </div>
         </div>
         <div class="contact-links">
@@ -2096,11 +2092,17 @@
     const glow = document.getElementById("glow");
     document.addEventListener("mousemove", e => { glow.style.left = e.clientX + "px"; glow.style.top = e.clientY + "px"; });
 
+    // Lab count
+    // Lab count
     const labCount = document.querySelectorAll(".lab-card").length;
     const labCountEl = document.getElementById("lab-count");
     if (labCountEl) labCountEl.textContent = labCount;
+
+    }
+
+    }
   </script>
-  <script src="i18next-system.js"></script>
+  
 </body>
 
 </html>
