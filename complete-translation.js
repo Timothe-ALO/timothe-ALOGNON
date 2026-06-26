@@ -102,6 +102,9 @@ function loadLanguage(lang) {
   localStorage.setItem('lang', lang);
   const c = CONTENT[lang];
 
+  // Set body data attribute for CSS targeting
+  document.body.setAttribute('data-lang', lang);
+
   // Update buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -132,14 +135,6 @@ function loadLanguage(lang) {
   metrics[0].textContent = c.metricYears;
   metrics[1].textContent = c.metricLabs;
   metrics[2].textContent = c.metricServices;
-
-  // Show/hide content based on language
-  document.querySelectorAll('.lang-en').forEach(el => {
-    el.style.display = (lang === 'en') ? '' : 'none';
-  });
-  document.querySelectorAll('.lang-fr').forEach(el => {
-    el.style.display = (lang === 'fr') ? '' : 'none';
-  });
 
   // Translate lab difficulties
   document.querySelectorAll('.lab-difficulty').forEach(el => {
