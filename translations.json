@@ -38,8 +38,7 @@
         },
         "labs": {
           "label": "04 - Labs & Projets",
-          "title": "Réalisations pratiques",
-          "count": "{{count}} projets"
+          "title": "Réalisations pratiques"
         },
         "certs": {
           "label": "05 — Certifications",
@@ -98,8 +97,7 @@
         },
         "labs": {
           "label": "04 - Labs & Projects",
-          "title": "Practical achievements",
-          "count": "{{count}} projects"
+          "title": "Practical achievements"
         },
         "certs": {
           "label": "05 — Certifications",

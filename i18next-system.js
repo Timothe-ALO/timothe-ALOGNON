@@ -101,9 +101,7 @@ function updateContent() {
   if (metricLabs) metricLabs.textContent = t('pages.home.metricLabs');
   if (metricServices) metricServices.textContent = t('pages.home.metricServices');
 
-  // ========== LABS COUNT ==========
-  const labTotal = document.getElementById('lab-total');
-  if (labTotal) labTotal.textContent = t('pages.labs.count', { count: labCount });
+  // ========== LABS COUNT (removed - no longer displayed) ==========
 
   // ========== CONTACT PAGE ==========
   const contactText = document.querySelector('.contact-text');
