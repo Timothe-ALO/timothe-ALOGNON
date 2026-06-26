@@ -1,0 +1,122 @@
+{
+  "fr": {
+    "translation": {
+      "sidebar": {
+        "role": "Cybersecurity Student",
+        "status": "Ouvert a un stage"
+      },
+      "nav": {
+        "menu": "Menu",
+        "labs": "Labs",
+        "contact": "Contact",
+        "home": "Accueil",
+        "about": "À propos",
+        "skills": "Skills",
+        "projectsLabs": "Projets & Labs",
+        "certifications": "Certifications",
+        "contactMe": "Me contacter"
+      },
+      "pages": {
+        "home": {
+          "label": "01 - Accueil",
+          "title": "Ingénieur Cybersécurité",
+          "bio": "Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration système Linux/Windows. En quête de mon premier <strong>stage en cybersécurité</strong> - Admin IT, SOC analyst ou Technicien Réseaux Informatiques.",
+          "btnLabs": "Voir mes labs →",
+          "btnContact": "Me contacter",
+          "metricYears": "ans de formation",
+          "metricLabs": "labs pratiques",
+          "metricServices": "services configurés"
+        },
+        "about": {
+          "label": "02 - À propos",
+          "title": "Mon parcours"
+        },
+        "skills": {
+          "label": "03 - Compétences",
+          "title": "Domaines de maîtrise",
+          "mastery": "Maîtrise"
+        },
+        "labs": {
+          "label": "04 - Labs & Projets",
+          "title": "Réalisations pratiques",
+          "count": "{{count}} projets"
+        },
+        "certs": {
+          "label": "05 — Certifications",
+          "title": "Parcours de certification"
+        },
+        "contact": {
+          "label": "06 - Contact",
+          "title": "Travaillons ensemble",
+          "text": "Je suis à la recherche d'un <strong>stage en cybersécurité</strong>, sécurité réseau ou administration système.<br><br>N'hésite pas à me contacter pour discuter d'une opportunité ou d'un projet collaboratif.",
+          "availability": "Disponible dès maintenant pour un stage"
+        }
+      },
+      "certs": {
+        "completed": "Completed",
+        "inProgress": "En cours",
+        "planned": "En préparation"
+      }
+    }
+  },
+  "en": {
+    "translation": {
+      "sidebar": {
+        "role": "Cybersecurity Student",
+        "status": "Open to internships"
+      },
+      "nav": {
+        "menu": "Menu",
+        "labs": "Labs",
+        "contact": "Contact",
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projectsLabs": "Projects & Labs",
+        "certifications": "Certifications",
+        "contactMe": "Contact me"
+      },
+      "pages": {
+        "home": {
+          "label": "01 - Home",
+          "title": "Cybersecurity Engineer",
+          "bio": "Passionate about <strong>network infrastructure security</strong> and Linux/Windows system administration. Looking for my first <strong>cybersecurity internship</strong> - IT Admin, SOC analyst or Network Technician.",
+          "btnLabs": "View my labs →",
+          "btnContact": "Contact me",
+          "metricYears": "years of training",
+          "metricLabs": "practical labs",
+          "metricServices": "services configured"
+        },
+        "about": {
+          "label": "02 - About",
+          "title": "My journey"
+        },
+        "skills": {
+          "label": "03 - Skills",
+          "title": "Areas of expertise",
+          "mastery": "Proficiency"
+        },
+        "labs": {
+          "label": "04 - Labs & Projects",
+          "title": "Practical achievements",
+          "count": "{{count}} projects"
+        },
+        "certs": {
+          "label": "05 — Certifications",
+          "title": "Certification path"
+        },
+        "contact": {
+          "label": "06 - Contact",
+          "title": "Let's work together",
+          "text": "I am looking for a <strong>cybersecurity internship</strong>, network security or system administration role.<br><br>Feel free to contact me to discuss an opportunity or collaborative project.",
+          "availability": "Available now for internship"
+        }
+      },
+      "certs": {
+        "completed": "Completed",
+        "inProgress": "In Progress",
+        "planned": "Planned"
+      }
+    }
+  }
+}
