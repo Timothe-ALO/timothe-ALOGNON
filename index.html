@@ -265,6 +265,10 @@
       margin-top: .6rem;
     }
 
+    /* LANGUAGE CONTENT - Default to English */
+    .lang-fr { display: none; }
+    .lang-en { display: block; }
+
     /* LANGUAGE SWITCHER */
     .lang-switcher {
       position: absolute;
@@ -1381,19 +1385,31 @@
         </div>
       </div>
       <div class="about-grid">
-        <div class="about-text">
-          <p>Je m'appelle <strong>Timothé ALOGNON</strong>, étudiant en 2ème année de cybersécurité a Knowbridge
-            University Institute. Titulaire d'un Bac
-            D en 2024 au Togo, je me spécialise dans la <strong>sécurité des infrastructures réseau</strong> et
+        <!-- FRENCH VERSION -->
+        <div class="about-text lang-fr">
+          <p>Je m'appelle <strong>Timothé ALOGNON</strong>, étudiant en 3ème année de cybersécurité à Knowbridge
+            University Institute. Titulaire d'un Bac D en 2024 au Togo, je me spécialise dans la <strong>sécurité des infrastructures réseau</strong> et
             l'administration système Linux/Windows.</p>
           <p>Mon approche est <strong>orientée pratique</strong> : je construis des labs, configure des services réels
             en simulation (Cisco Packet Tracer, GNS3, VMware, VirtualBox, Windows Server, Linux, Kali Linux) ou non, et
             documente chaque étape pour constituer un rapport technique.</p>
           <p>Objectif à court terme : <strong>décrocher un stage</strong> en sécurité réseau ou en
-            administration système pour mettre
-            à profit mes compétences en monitoring, hardening, maintenance et réponse aux incidents.</p>
+            administration système pour mettre à profit mes compétences en monitoring, hardening, maintenance et réponse aux incidents.</p>
         </div>
-        <div>
+
+        <!-- ENGLISH VERSION -->
+        <div class="about-text lang-en">
+          <p>My name is <strong>Timothé ALOGNON</strong>, a 3rd-year cybersecurity student at Knowbridge
+            University Institute. Graduated with a Baccalaureate D in 2024 in Togo, I specialize in <strong>network infrastructure security</strong> and
+            Linux/Windows system administration.</p>
+          <p>My approach is <strong>hands-on</strong>: I build labs, configure real services
+            in simulation (Cisco Packet Tracer, GNS3, VMware, VirtualBox, Windows Server, Linux, Kali Linux) or not, and
+            document each step to create a technical report.</p>
+          <p>Short-term goal: <strong>secure an internship</strong> in network security or system administration to leverage my skills in monitoring, hardening, maintenance and incident response.</p>
+        </div>
+
+        <!-- FRENCH TABLE -->
+        <div class="lang-fr">
           <table class="info-table">
             <tr>
               <td>Statut</td>
@@ -1402,7 +1418,7 @@
             </tr>
             <tr>
               <td>Formation</td>
-              <td>Bac+2 Cybersécurité</td>
+              <td>Bac+3 Cybersécurité</td>
             </tr>
             <tr>
               <td>Focus</td>
@@ -1418,6 +1434,37 @@
             </tr>
             <tr>
               <td>Localisation</td>
+              <td>Lomé, Togo</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- ENGLISH TABLE -->
+        <div class="lang-en">
+          <table class="info-table">
+            <tr>
+              <td>Status</td>
+              <td><span style="display:inline-flex;align-items:center;gap:6px"><span class="pulse"
+                    style="width:5px;height:5px"></span>Open to Internship</span></td>
+            </tr>
+            <tr>
+              <td>Education</td>
+              <td>Bachelor+3 Cybersecurity</td>
+            </tr>
+            <tr>
+              <td>Focus</td>
+              <td>Network security / System administration</td>
+            </tr>
+            <tr>
+              <td>Main OS</td>
+              <td>Linux / Windows</td>
+            </tr>
+            <tr>
+              <td>Languages</td>
+              <td>French · English</td>
+            </tr>
+            <tr>
+              <td>Location</td>
               <td>Lomé, Togo</td>
             </tr>
           </table>

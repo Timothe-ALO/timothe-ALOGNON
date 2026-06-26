@@ -162,6 +162,14 @@ function loadLanguage(lang) {
   titles[5].textContent = c.contactTitle;
   document.querySelector('.contact-text').innerHTML = c.contactText;
   document.querySelector('.contact-avail').innerHTML = `<div class="pulse"></div>${c.contactAvail}`;
+
+  // Show/hide content based on language
+  document.querySelectorAll('.lang-en').forEach(el => {
+    el.style.display = (lang === 'en') ? '' : 'none';
+  });
+  document.querySelectorAll('.lang-fr').forEach(el => {
+    el.style.display = (lang === 'fr') ? '' : 'none';
+  });
 }
 
 // Load saved language on page load
