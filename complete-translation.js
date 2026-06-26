@@ -16,7 +16,7 @@ const CONTENT = {
     // Home
     homeEyebrow: 'Cybersecurity Student - 3rd year',
     homeTitle: 'Cybersecurity<br>Engineer',
-    homeBio: 'Passionate about <strong>network infrastructure security</strong> and Linux/Windows system administration. Looking for a <strong>cybersecurity internship</strong>.',
+    homeBio: 'Passionate about <strong>network infrastructure security</strong> and Linux/Windows system administration. <strong>Open to work opportunities</strong> in cybersecurity.',
     btnLabs: 'View my labs →',
     btnContact: 'Contact me',
     metricYears: 'years of training',
@@ -63,7 +63,7 @@ const CONTENT = {
     // Home
     homeEyebrow: 'Étudiant en Cybersécurité - 3ème année',
     homeTitle: 'Ingénieur<br>Cybersécurité',
-    homeBio: 'Passionné par la <strong>sécurité des infrastructures réseau</strong> et l\'administration système Linux/Windows. En quête d\'un <strong>stage en cybersécurité</strong>.',
+    homeBio: 'Passionné par la <strong>sécurité des infrastructures réseau</strong> et l\'administration système Linux/Windows. <strong>Ouvert aux opportunités de travail</strong> en cybersécurité.',
     btnLabs: 'Voir mes labs →',
     btnContact: 'Me contacter',
     metricYears: 'ans de formation',
