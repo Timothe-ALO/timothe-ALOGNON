@@ -1263,7 +1263,29 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    /* HIDE GOOGLE TRANSLATE BRANDING */
+    .goog-te-banner-frame { display: none !important; }
+    body { top: 0 !important; }
+    #google_translate_element { display: none !important; }
+    .goog-logo-link { display: none !important; }
+    .goog-te-gadget { color: transparent !important; }
+    .goog-te-gadget span { display: none !important; }
+    .goog-te-combo { display: none !important; }
   </style>
+
+  <!-- Google Translate Widget -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -1272,8 +1294,14 @@
   <aside>
     <div class="sb-topbar"></div>
 
-    <!-- Language Switcher -->
-    
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element"></div>
+
+    <!-- Language Switcher (Custom Buttons) -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchToLang('en')" id="btn-en">🇬🇧 EN</button>
+      <button class="lang-btn" onclick="switchToLang('fr')" id="btn-fr">🇫🇷 FR</button>
+    </div>
 
     <div class="sb-profile">
       <div class="avatar-ring"><img id="sidebar-photo" src="images/T 5 F _ 2.png" alt="Timothé ALOGNON"></div>
@@ -2096,6 +2124,55 @@
     const labCount = document.querySelectorAll(".lab-card").length;
     const labCountEl = document.getElementById("lab-count");
     if (labCountEl) labCountEl.textContent = labCount;
+
+    // ========== GOOGLE TRANSLATE LANGUAGE SWITCHER ==========
+    function switchToLang(lang) {
+      // Update button states
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + lang).classList.add('active');
+
+      // Trigger Google Translate
+      if (lang === 'en') {
+        // Reset to original English
+        const iframe = document.querySelector('.goog-te-menu-frame');
+        if (!iframe) {
+          // Page not translated yet, do nothing
+          return;
+        }
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const restore = innerDoc.querySelector('.goog-te-menu2-item span.text:first-child');
+        if (restore) restore.click();
+      } else {
+        // Translate to French
+        setTimeout(() => {
+          const selectElem = document.querySelector('.goog-te-combo');
+          if (selectElem) {
+            selectElem.value = lang;
+            selectElem.dispatchEvent(new Event('change'));
+          } else {
+            // Fallback: try clicking the dropdown
+            const iframe = document.querySelector('.goog-te-menu-frame');
+            if (iframe) {
+              const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+              const langOption = innerDoc.querySelector('.goog-te-menu2-item-selected') ||
+                                innerDoc.querySelector('span.text');
+              if (langOption) langOption.click();
+            }
+          }
+        }, 500);
+      }
+    }
+
+    // Auto-activate correct button on page load (if already translated)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const currentLang = document.documentElement.lang || 'en';
+        if (currentLang.startsWith('fr')) {
+          document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+          document.getElementById('btn-fr').classList.add('active');
+        }
+      }, 1000);
+    });
   </script>
   
 </body>
