@@ -25,11 +25,19 @@ const translations = {
     skillsTitle: "Domaines de maîtrise",
     labsLabel: "04 - Labs & Projets",
     labsTitle: "Réalisations pratiques",
-    labsCount: " projets en Réseaux et Sécurité ( + 10 )",
+    labsCount: " projets",
     certsLabel: "05 — Certifications",
     certsTitle: "Parcours de certification",
     contactLabel: "06 - Contact",
     contactTitle: "Travaillons ensemble",
+
+    // Home page content
+    homeBio: "Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration système Linux/Windows. En quête de mon premier <strong>stage en cybersécurité</strong> - Admin IT, SOC analyst ou Technicien Réseaux Informatiques.",
+    btnLabs: "Voir mes labs →",
+    btnContact: "Me contacter",
+    metricYears: "ans de formation",
+    metricLabs: "labs pratiques",
+    metricServices: "services configurés",
 
     // Contact page
     contactText: "Je suis à la recherche d'un <strong>stage en cybersécurité</strong>, sécurité réseau ou administration système.<br><br>N'hésite pas à me contacter pour discuter d'une opportunité ou d'un projet collaboratif.",
@@ -114,11 +122,19 @@ const translations = {
     skillsTitle: "Areas of expertise",
     labsLabel: "04 - Labs & Projects",
     labsTitle: "Practical achievements",
-    labsCount: " projects in Networks & Security ( + 10 )",
+    labsCount: " projects",
     certsLabel: "05 — Certifications",
     certsTitle: "Certification path",
     contactLabel: "06 - Contact",
     contactTitle: "Let's work together",
+
+    // Home page content
+    homeBio: "Passionate about <strong>network infrastructure security</strong> and Linux/Windows system administration. Looking for my first <strong>cybersecurity internship</strong> - IT Admin, SOC analyst or Network Technician.",
+    btnLabs: "View my labs →",
+    btnContact: "Contact me",
+    metricYears: "years of training",
+    metricLabs: "practical labs",
+    metricServices: "services configured",
 
     // Contact page
     contactText: "I am looking for a <strong>cybersecurity internship</strong>, network security or system administration role.<br><br>Feel free to contact me to discuss an opportunity or collaborative project.",
@@ -225,6 +241,25 @@ function switchLang(lang) {
   if (pageTitles[4]) pageTitles[4].textContent = t.certsTitle;
   if (pageLabels[5]) pageLabels[5].textContent = t.contactLabel;
   if (pageTitles[5]) pageTitles[5].textContent = t.contactTitle;
+
+  // ========== HOME PAGE CONTENT ==========
+  const homeBio = document.getElementById("home-bio");
+  if (homeBio) homeBio.innerHTML = t.homeBio;
+
+  const btnLabs = document.getElementById("btn-labs");
+  if (btnLabs) btnLabs.textContent = t.btnLabs;
+
+  const btnContact = document.getElementById("btn-contact");
+  if (btnContact) btnContact.textContent = t.btnContact;
+
+  const metricYears = document.getElementById("metric-years");
+  if (metricYears) metricYears.textContent = t.metricYears;
+
+  const metricLabs = document.getElementById("metric-labs");
+  if (metricLabs) metricLabs.textContent = t.metricLabs;
+
+  const metricServices = document.getElementById("metric-services");
+  if (metricServices) metricServices.textContent = t.metricServices;
 
   // ========== LABS COUNT ==========
   const labTotal = document.getElementById("lab-total");

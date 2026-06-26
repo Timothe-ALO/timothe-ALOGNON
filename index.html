@@ -1319,27 +1319,27 @@
             <span class="line1">ALOGNON<br>Timothé.</span><br>
             <span class="line2">Security &<br>Networks.</span>
           </h1>
-          <p class="home-bio">Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration
+          <p class="home-bio" id="home-bio">Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration
             système Linux/Windows. En quête de mon premier <strong>stage en
               cybersécurité</strong> - Admin IT, SOC analyst ou Technicien Réseaux Informatiques.</p>
           <div class="home-btns">
-            <button class="btn btn-solid" onclick="nav('labs',document.querySelector('[onclick*=labs]'))">Voir mes labs
+            <button class="btn btn-solid" onclick="nav('labs',document.querySelector('[onclick*=labs]'))" id="btn-labs">Voir mes labs
               →</button>
-            <button class="btn btn-outline" onclick="nav('contact',document.querySelector('[onclick*=contact]'))">Me
+            <button class="btn btn-outline" onclick="nav('contact',document.querySelector('[onclick*=contact]'))" id="btn-contact">Me
               contacter</button>
           </div>
           <div class="home-metrics">
             <div>
               <div class="metric-val">2<span>+</span></div>
-              <div class="metric-label">ans de formation</div>
+              <div class="metric-label" id="metric-years">ans de formation</div>
             </div>
             <div>
               <div class="metric-val">10<span>+</span></div>
-              <div class="metric-label">labs pratiques</div>
+              <div class="metric-label" id="metric-labs">labs pratiques</div>
             </div>
             <div>
               <div class="metric-val">15<span>+</span></div>
-              <div class="metric-label">services configurés</div>
+              <div class="metric-label" id="metric-services">services configurés</div>
             </div>
           </div>
         </div>
@@ -1994,6 +1994,17 @@
         </div>
         <div class="cert-row">
           <div class="cert-badge" style="padding: 4px;">
+            <img src="images/stage_0_certificate .png" alt="UBI Stage 0 Certificate"
+              style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <div class="cert-name">UBI Stage 0 — Cybersecurity Fundamentals</div>
+            <div class="cert-issuer">Ubuntu Bridge Initiative (Cohort 1)</div>
+          </div>
+          <span class="cert-pill pill-plan">Completed (2024)</span>
+        </div>
+        <div class="cert-row">
+          <div class="cert-badge" style="padding: 4px;">
             <img src="images/stage_1_certificate.png" alt="UBI Stage 1 Certificate"
               style="width: 100%; height: 100%; object-fit: contain;">
           </div>
@@ -2013,17 +2024,6 @@
             <div class="cert-issuer">Ubuntu Bridge Initiative (Cohort 1)</div>
           </div>
           <span class="cert-pill pill-plan">Completed (2025)</span>
-        </div>
-        <div class="cert-row">
-          <div class="cert-badge" style="padding: 4px;">
-            <img src="images/stage_0_certificate .png" alt="UBI Stage 3 Certificate"
-              style="width: 100%; height: 100%; object-fit: contain;">
-          </div>
-          <div>
-            <div class="cert-name">UBI Stage 3 — Incident Response & Digital Forensics</div>
-            <div class="cert-issuer">Ubuntu Bridge Initiative (Cohort 1)</div>
-          </div>
-          <span class="cert-pill pill-plan">Completed (2026)</span>
         </div>
         <div class="cert-row">
           <div class="cert-badge">CEH</div>
@@ -2101,6 +2101,7 @@
     document.getElementById("lab-total").textContent = labCount + " projets";
 
     // ========== COMPLETE TRANSLATION SYSTEM ==========
+        // ========== COMPLETE TRANSLATION SYSTEM ==========
     const translations = {
       fr: {
         // Sidebar
@@ -2127,11 +2128,19 @@
         skillsTitle: "Domaines de maîtrise",
         labsLabel: "04 - Labs & Projets",
         labsTitle: "Réalisations pratiques",
-        labsCount: " projets en Réseaux et Sécurité ( + 10 )",
+        labsCount: " projets",
         certsLabel: "05 — Certifications",
         certsTitle: "Parcours de certification",
         contactLabel: "06 - Contact",
         contactTitle: "Travaillons ensemble",
+
+        // Home page content
+        homeBio: "Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration système Linux/Windows. En quête de mon premier <strong>stage en cybersécurité</strong> - Admin IT, SOC analyst ou Technicien Réseaux Informatiques.",
+        btnLabs: "Voir mes labs →",
+        btnContact: "Me contacter",
+        metricYears: "ans de formation",
+        metricLabs: "labs pratiques",
+        metricServices: "services configurés",
 
         // Contact page
         contactText: "Je suis à la recherche d'un <strong>stage en cybersécurité</strong>, sécurité réseau ou administration système.<br><br>N'hésite pas à me contacter pour discuter d'une opportunité ou d'un projet collaboratif.",
@@ -2216,11 +2225,19 @@
         skillsTitle: "Areas of expertise",
         labsLabel: "04 - Labs & Projects",
         labsTitle: "Practical achievements",
-        labsCount: " projects in Networks & Security ( + 10 )",
+        labsCount: " projects",
         certsLabel: "05 — Certifications",
         certsTitle: "Certification path",
         contactLabel: "06 - Contact",
         contactTitle: "Let's work together",
+
+        // Home page content
+        homeBio: "Passionate about <strong>network infrastructure security</strong> and Linux/Windows system administration. Looking for my first <strong>cybersecurity internship</strong> - IT Admin, SOC analyst or Network Technician.",
+        btnLabs: "View my labs →",
+        btnContact: "Contact me",
+        metricYears: "years of training",
+        metricLabs: "practical labs",
+        metricServices: "services configured",
 
         // Contact page
         contactText: "I am looking for a <strong>cybersecurity internship</strong>, network security or system administration role.<br><br>Feel free to contact me to discuss an opportunity or collaborative project.",
@@ -2328,6 +2345,25 @@
       if (pageLabels[5]) pageLabels[5].textContent = t.contactLabel;
       if (pageTitles[5]) pageTitles[5].textContent = t.contactTitle;
 
+      // ========== HOME PAGE CONTENT ==========
+      const homeBio = document.getElementById("home-bio");
+      if (homeBio) homeBio.innerHTML = t.homeBio;
+
+      const btnLabs = document.getElementById("btn-labs");
+      if (btnLabs) btnLabs.textContent = t.btnLabs;
+
+      const btnContact = document.getElementById("btn-contact");
+      if (btnContact) btnContact.textContent = t.btnContact;
+
+      const metricYears = document.getElementById("metric-years");
+      if (metricYears) metricYears.textContent = t.metricYears;
+
+      const metricLabs = document.getElementById("metric-labs");
+      if (metricLabs) metricLabs.textContent = t.metricLabs;
+
+      const metricServices = document.getElementById("metric-services");
+      if (metricServices) metricServices.textContent = t.metricServices;
+
       // ========== LABS COUNT ==========
       const labTotal = document.getElementById("lab-total");
       if (labTotal) labTotal.textContent = document.querySelectorAll('.lab-card').length + t.labsCount;
@@ -2417,6 +2453,13 @@
 
       // Save preference
       localStorage.setItem('preferredLang', lang);
+    }
+
+    // Load saved language preference on page load
+    const savedLang = localStorage.getItem('preferredLang') || 'fr';
+    if (savedLang === 'en') {
+      switchLang('en');
+    }
     }
 
     // Load saved language preference on page load
