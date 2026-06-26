@@ -267,12 +267,12 @@
 
     /* LANGUAGE CONTENT - Default to English */
     .lang-fr { display: none !important; }
-    .lang-en { display: initial !important; }
+    .lang-en { display: revert !important; }
 
     /* When active, override with higher specificity */
-    body[data-lang="fr"] .lang-fr { display: initial !important; }
+    body[data-lang="fr"] .lang-fr { display: revert !important; }
     body[data-lang="fr"] .lang-en { display: none !important; }
-    body[data-lang="en"] .lang-en { display: initial !important; }
+    body[data-lang="en"] .lang-en { display: revert !important; }
     body[data-lang="en"] .lang-fr { display: none !important; }
 
     /* LANGUAGE SWITCHER */
@@ -1331,7 +1331,7 @@
             <span class="line2">Security &<br>Networks.</span>
           </h1>
           <p class="home-bio" id="home-bio">Passionné par la <strong>sécurité des infrastructures réseau</strong> et l'administration
-            système Linux/Windows. En quête de mon premier <strong>stage en
+            système Linux/Windows. En quête d'un <strong>stage en
               cybersécurité</strong> - Admin IT, SOC analyst ou Technicien Réseaux Informatiques.</p>
           <div class="home-btns">
             <button class="btn btn-solid" onclick="nav('labs',document.querySelector('[onclick*=labs]'))" id="btn-labs">Voir mes labs
