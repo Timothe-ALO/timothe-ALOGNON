@@ -121,13 +121,8 @@ function loadLanguage(lang) {
   navItems[4].innerHTML = `<span class="nav-icon">◉</span> ${c.navCerts}`;
   navItems[5].innerHTML = `<span class="nav-icon">◎</span> ${c.navContact}`;
 
-  // Page labels
-  const labels = document.querySelectorAll('.page-label');
-  const titles = document.querySelectorAll('.page-title');
-
   // Home
   document.querySelector('.home-eyebrow').textContent = c.homeEyebrow;
-  titles[0].innerHTML = c.homeTitle;
   document.querySelector('.home-bio').innerHTML = c.homeBio;
   document.querySelector('.btn-solid').textContent = c.btnLabs;
   document.querySelector('.btn-outline').textContent = c.btnContact;
@@ -137,31 +132,6 @@ function loadLanguage(lang) {
   metrics[0].textContent = c.metricYears;
   metrics[1].textContent = c.metricLabs;
   metrics[2].textContent = c.metricServices;
-
-  // About
-  labels[1].textContent = c.aboutLabel;
-  titles[1].textContent = c.aboutTitle;
-
-  // Skills
-  labels[2].textContent = c.skillsLabel;
-  titles[2].textContent = c.skillsTitle;
-  document.querySelectorAll('.sc-bar-top span:first-child').forEach(span => {
-    span.textContent = c.skillMastery;
-  });
-
-  // Labs
-  labels[3].textContent = c.labsLabel;
-  titles[3].textContent = c.labsTitle;
-
-  // Certs
-  labels[4].textContent = c.certsLabel;
-  titles[4].textContent = c.certsTitle;
-
-  // Contact
-  labels[5].textContent = c.contactLabel;
-  titles[5].textContent = c.contactTitle;
-  document.querySelector('.contact-text').innerHTML = c.contactText;
-  document.querySelector('.contact-avail').innerHTML = `<div class="pulse"></div>${c.contactAvail}`;
 
   // Show/hide content based on language
   document.querySelectorAll('.lang-en').forEach(el => {
